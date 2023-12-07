@@ -4,7 +4,8 @@
       <li *ngFor="let character of characterList;
                   let i = index;
                   let isEven = even;"
-          class="list-group-item {{ isEven ? 'list-group-item list-group-item-secondary' : undefined }}">
+          class="list-group-item"
+          [ngClass]="{ 'list-group-item-success' : isEven }">
         <span class="text-primary">{{ i + 1 }}. </span>
         <span>{{ character.name }} - </span>
         <strong>Power: </strong>
