@@ -6,9 +6,14 @@
                   let isEven = even;"
           class="list-group-item"
           [ngClass]="{ 'list-group-item-success' : isEven }">
-        <span class="text-primary">{{ i + 1 }}. </span>
-        <span>{{ character.name }} - </span>
-        <strong>Power: </strong>
-        <span>{{ character.power }}</span>
+
+          <div>
+            <span class="text-primary">{{ i + 1 }}. </span>
+            <span>{{ character.name }} - </span>
+            <strong>Power: </strong>
+            <span>{{ character.power }}</span>
+          </div>
+
+        <span class="btn btn-danger" (click)="deleteCharacter(i)">X</span>
       </li>
     </ul>
