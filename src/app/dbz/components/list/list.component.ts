@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { Character } from '../../interfaces/character.interface';
 
 @Component({
   selector: 'dbz-list',
@@ -6,4 +7,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './list.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ListComponent { }
+export class ListComponent {
+  @Input()
+  public characterList: Character[] = [];
+}
